@@ -1,5 +1,6 @@
 # cs-tech
 
+## [레퍼런스 참고](https://github.com/davJ-star/cs-tech/blob/main/reference.md)
 
 ## 웹 개발
 ### 브라우저의 렌더링 원리: 

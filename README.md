@@ -1,6 +1,7 @@
 # cs-tech
+- ## [학부 기록 참고](https://www.notion.so/CS-2fa13262bcc247589913e9c0ebc7bab2)
 
-## [레퍼런스 참고](https://github.com/davJ-star/cs-tech/blob/main/reference.md)
+- ## [레퍼런스 참고](https://github.com/davJ-star/cs-tech/blob/main/reference.md)
 
 ## 웹 개발
 ### 브라우저의 렌더링 원리: 

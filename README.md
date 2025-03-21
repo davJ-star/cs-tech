@@ -103,8 +103,38 @@ Spring Framework의 핵심 개념인 IoC, DI, AOP를 설명하고, 각 개념의
     이때는 HTTPS지만 브라우저에서 주의 요함, 안전하지 않은 사이트와 같은 알림으로 주의 받게 된다.
 
 ```
+### TCP (흐름제어/혼잡제어)
+```
+네트워크 통신에서 신뢰적인 연결방식
+TCP는 기본적으로 unreliable network에서, reliable network를 보장할 수 있도록 하는 프로토콜
 
+reliable network를 보장한다는 것은 4가지 문제점 존재
+- 손실 : packet이 손실될 수 있는 문제
+- 순서 바뀜 : packet의 순서가 바뀌는 문제
+- Congestion : 네트워크가 혼잡한 문제
+- Overload : receiver가 overload 되는 문제
+```
 
+```
+- 흐름제어 (endsystem 대 endsystem)
+    송신측과 수신측의 데이터 처리 속도 차이를 해결하기 위한 기법
+    Flow Control은 receiver가 packet을 지나치게 많이 받지 않도록 조절하는 것
+    기본 개념은 receiver가 sender에게 현재 자신의 상태를 feedback 한다는 점
+- 혼잡제어 : 송신측의 데이터 전달과 네트워크의 데이터 처리 속도 차이를 해결하기 위한 기법
+```
+
+#### 전송의 전체 과정
+```
+전송의 전체 과정
+응용 계층(Application Layer)에서 데이터를 전송할 때, 보내는 쪽(sender)의 애플리케이션(Application)은 소켓(Socket)에 데이터를 쓰게 됩니다.
+이 데이터는 전송 계층(Transport Layer)으로 전달되어 세그먼트(Segment)라는 작은 단위로 나누어집니다.
+전송 계층은 이 세그먼트를 네트워크 계층(Network Layer)에 넘겨줍니다.
+전송된 데이터는 수신자(receiver) 쪽으로 전달되어, 수신자 쪽에서는 수신 버퍼(Receive Buffer)에 저장됩니다.
+이때, 수신자 쪽에서는 수신 버퍼의 용량을 넘치게 하지 않도록 조절해야 합니다.
+수신자 쪽에서는 자신의 수신 버퍼의 남은 용량을 상대방(sender)에게 알려주는데, 이를 "수신 윈도우(Receive Window)"라고 합니다.
+송신자(sender)는 수신자의 수신 윈도우를 확인하여 수신자의 수신 버퍼 용량을 초과하지 않도록 데이터를 전송합니다.
+이를 통해 데이터 전송 중에 수신 버퍼가 넘치는 현상을 방지하면서, 안정적인 데이터 전송을 보장합니다. 이를 "플로우 컨트롤(Flow Control)"이라고 합니다.
+```
 
 ## 데이터베이스
 

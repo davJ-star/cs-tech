@@ -7,6 +7,7 @@
 [참고 블로그](https://github.com/davJ-star/tech-interview-for-developer)
 
 ## 웹 개발
+[웹 참고](https://github.com/davJ-star/tech-interview-for-developer/tree/master/Web)
 ### 브라우저의 렌더링 원리: 
 브라우저가 HTML, CSS, JavaScript를 해석하여 웹 페이지를 화면에 표시하는 과정을 설명해주세요. 렌더링 파이프라인의 주요 단계와 각 단계에서 발생하는 작업들을 자세히 설명해주세요.
 
